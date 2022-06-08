@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
+    <title>REGISTRO</title>
+  </head>
+  
+    <header style="width: 100%;height: 180px; overflow: hidden; background: #48bb78; margin-bottom: 20px;">
+        <div class="wrapper" style="width: 90%; margin: auto; overflow: hidden;">
+        <div class="logo" style="color: #f2f2f2; font-size: 40px; font-family: 'Nexa'; line-height: 200px; float: left;">CÓMPUTO DE HORAS</div>
+        <nav style="float: right; line-height: 190px;">
+            <a href="/create" style="background-color: #007bff; border-color: black;" class="btn btn-primary">Nueva Imputacion</a>
+            <a href="/index" style="background-color: #007bff; border-color: black; margin: 6px;" class="btn btn-primary">Registro</a>
+            <a href="/home"style="background-color: #fff; border-color: black; margin: 6px;" class="btn btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="18" fill="currentColor !important" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                    <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
+                  </svg>
+            </a>
+        </nav>
+        </div>
+        </header>
+<body style="padding-bottom: 30px;">
+<div style = "max-width: 714px; margin-right: auto; margin-left: auto; padding-right: 1.5rem; padding-left: 1.5rem;">
+    <h1 style="text-align: center; font-size: 30px; line-height: 36px; font-weight: bold;">IMPUTACIONES</h1>
+    <div style="border-style: solid; border-color: #edf2f7; margin-top: 50px;">
+        <table id="users" style="border-top-width: 1px; border-color: rgb(209 213 219); ">
+            <thead style="background-color: #48bb78">
+                <tr>
+                    <th style="padding-right: 1.5rem; padding-left: 1.5rem; padding-top: 0.5rem; padding-bottom: 0.5rem; font-size: .75rem; color: #f2f2f2;">
+                        ID
+                    </th>
+                    <th style="padding-right: 1.5rem; padding-left: 1.5rem; padding-top: 0.5rem; padding-bottom: 0.5rem; font-size: .75rem; color: #f2f2f2;">
+                        Empresa
+                    </th>
+                    <th style="padding-right: 1.5rem; padding-left: 1.5rem; padding-top: 0.5rem; padding-bottom: 0.5rem; font-size: .75rem; color: #f2f2f2;">
+                        Nombre del trabajador
+                    </th>
+                    <th style="padding-right: 1.5rem; padding-left: 1.5rem; padding-top: 0.5rem; padding-bottom: 0.5rem; font-size: .75rem; color: #f2f2f2;">
+                        Puesto de trabajo
+                    </th>
+                    <th style="padding-right: 1.5rem; padding-left: 1.5rem; padding-top: 0.5rem; padding-bottom: 0.5rem; font-size: .75rem; color: #f2f2f2;">
+                        Horas
+                    </th>
+                    <th style="padding-right: 1.5rem; padding-left: 1.5rem; padding-top: 0.5rem; padding-bottom: 0.5rem; font-size: .75rem; color: #f2f2f2;">
+                        View
+                    </th>
+                </tr>
+            </thead>
+            <tbody style="background-color:white; border-top-width: 1px; border-color: rgb(209 213 219);">
+                <% results.forEach((user)=> { %>
+                <tr style="white-space: nowrap;">
+                    <td style="padding-right: 1.5rem; padding-left: 1.5rem; padding-top: 1rem; padding-bottom: 1rem; font-size: .875rem; color: #a0aec0;">
+                        <%= user.id %>
+                    </td>
+                    <td style="padding-right: 1.5rem; padding-left: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">
+                        <div style="font-size: .875rem; color: #a0aec0;">
+                            <%= user.work %>
+                        </div>
+                    </td>
+                    <td style="padding-right: 1.5rem; padding-left: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">
+                        <div style="font-size: .875rem; color: #a0aec0;"></div>
+                        <%= user.user %>
+                    </td>
+                    <td style="padding-right: 1.5rem; padding-left: 1.5rem; padding-top: 1rem; padding-bottom: 1rem; font-size: .875rem; color: #a0aec0;">
+                        <%= user.position %>
+                    </td>
+                    <td style="padding-right: 1.5rem; padding-left: 1.5rem; padding-top: 1rem; padding-bottom: 1rem; font-size: .875rem; color: #a0aec0;">
+                        <%= user.hours %>
+                    </td>
+                    <td style="padding-right: 1.5rem; padding-left: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">
+                        <a href="/indexview/<%= user.id %>">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                              </svg>
+                        </a>
+                    </td>
+                </tr>
+            <% }) %>
+            </tbody>
+
+        </table>
+    </div>
+    <a href="/create" style="background-color: #48bb78; border-color: black; margin-top: 15px;" class="btn btn-primary">Añadir Imputacion</a>
+    
+    </div>
+</body>
+            <script src ="https://code.jquery.com/jquery-3.5.1.js"></script>
+            <script src ="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+            <script src ="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.17/dist/sweetalert2.all.min.js"></script>
+            <script>
+                $(document).ready(function () {
+                 $('#users').DataTable();
+                });
+                function confirmar(id){
+                    Swal.fire({
+                    title: '¿Estás seguro que quieres eliminar el registro ' +id+'?', 
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Confirmar'
+                    }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location = '/delete/'+id;
+                            }
+                        })
+                    }
+            </script>
+   
+    </html>
