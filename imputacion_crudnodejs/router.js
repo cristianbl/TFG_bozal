@@ -4,11 +4,7 @@ const router = express.Router();
 const conexion = require('./database/db');
 
 //MOSTRAT TODOS LOS REGISTROS
-<<<<<<< HEAD
 router.get('/index', (req, res)=>{
-=======
-router.get('/', (req, res)=>{
->>>>>>> d402dc06a7051d772717363bc5b6d8e4510dab26
 
      conexion.query('SELECT * FROM users', (error, results)=>{
         if(error){
@@ -19,7 +15,6 @@ router.get('/', (req, res)=>{
     }); 
 });
 
-<<<<<<< HEAD
 //MOSTRAR REGISTRO ESPECIFICO
 router.get('/indexview/:id', (req, res)=>{
 
@@ -33,22 +28,17 @@ router.get('/indexview/:id', (req, res)=>{
     })
 });
 
-=======
->>>>>>> d402dc06a7051d772717363bc5b6d8e4510dab26
 //RUTA PARA CREAR REGISTRO
 router.get('/create', (req, res) => {
     res.render('create');
 })
 
-<<<<<<< HEAD
 //RUTA PARA HOME
 router.get('/home', (req, res) => {
     res.render('home');
 })
 
 
-=======
->>>>>>> d402dc06a7051d772717363bc5b6d8e4510dab26
 //RUTA PARA EDITAR REGISTRO
 
 router.get('/edit/:id', (req, res) =>{

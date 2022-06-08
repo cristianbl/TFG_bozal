@@ -1,10 +1,6 @@
 const { json } = require('express');
 const express = require('express');
 const app = express();
-<<<<<<< HEAD
-=======
-const html = require('html');
->>>>>>> d402dc06a7051d772717363bc5b6d8e4510dab26
 
 app.set('view engine', 'ejs');
 
