@@ -4,7 +4,7 @@ const router = express.Router();
 const conexion = require('./database/db');
 
 //MOSTRAT TODOS LOS REGISTROS
-router.get('/index', (req, res)=>{
+router.get('/', (req, res)=>{
 
      conexion.query('SELECT * FROM users', (error, results)=>{
         if(error){
