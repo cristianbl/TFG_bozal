@@ -9,7 +9,7 @@ exports.save = (req, res)=>{
         if(error){
             console.log(error);
         } else {
-            res.redirect('/index');
+            res.redirect('/');
         }
     })
 };
@@ -24,7 +24,7 @@ exports.update = (req, res)=>{
         if(error){
             console.log(error);
         } else {
-            res.redirect('/index');
+            res.redirect('/');
         }
     })
 };
