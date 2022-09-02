@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  app:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports: 
+      - 5000:5000
+    volumes:
+      - .:/app
+      - '/app/node_modules'
+    depends_on:
+      - bqrxf1uedlr8vrproou7-mysql.services.clever-cloud.com
+  
+  bqrxf1uedlr8vrproou7-mysql.services.clever-cloud.com:
+    image: mysql:8.0
+    ports:
+      - 3306
+    environment:
+      - MYSQL_DATABASE:'bqrxf1uedlr8vrproou7'
+      - MYSQL_USER:'us5xbnabsflib9g8'
+      - MYSQL_PASSWORD:'LVkRUaiNrUKyibTBIB1L'
+ 
