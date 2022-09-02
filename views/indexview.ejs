@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="/style.css" rel="stylesheet" type="text/css">
+  <title>Registro: <%= user.id %>, <%= user.user %></title>
+</head>
+<body>
+  <header>
+      <div class="header">
+          <img class="logo" src="/logo-icon.png" />
+          <div class="planbtechTexto">Plan B TECH</div>
+          <div class="menus">
+            <a href="/" style="text-decoration: none;">
+              <div class="home">Home</div>
+            </a>
+            <a href="/compute" style="text-decoration: none;">
+              <div class="menu1">Registro</div>
+            </a>
+            <a href="/create" style="text-decoration: none;">
+              <div class="menu2">Realizar Imputación</div>
+            </a>
+              <div class="menu3">Reportar Ausencia</div>
+            <a href="/about" style="text-decoration: none;">
+              <div class="menu4">About</div>
+            </a>
+          </div>
+          <div class="signin">
+              <img class="usericon" src="/user.png">
+              <p>Are you admin?</p>
+              <form action="/login">
+              <button class="signUp">Sign In</button>
+            </div>
+          </form>  
+      </div>
+  </header>
+
+  <div class="tableroview">
+    <div class="tabla">
+        <h1>Registro: <%= user.id %>, <%= user.user %></h1>
+        <table id="users">
+            <thead>
+                <tr>
+                    <th>
+                        ID
+                    </th>
+                    <th>
+                        Empresa
+                    </th>
+                    <th>
+                        Empleado
+                    </th>
+                    <th>
+                        Puesto de trabajo
+                    </th>
+                    <th>
+                        Horas
+                    </th>
+                    <th>
+                        Fecha
+                    </th>
+                    <th>
+                        Reportar
+                    </th>
+                    <th>
+                        Edit
+                    </th>
+                    <th>
+                        Delete
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if (user) { %>
+                <tr>
+                    <td>
+                        <%= user.id %>
+                    </td>
+                    <td>
+                        <%= user.work %>
+                    </td>
+                    <td>
+                        <%= user.user %>
+                    </td>
+                    <td>
+                        <%= user.position %>
+                    </td>
+                    <td>
+                        <%= user.hours %>
+                    </td>
+                    <td>
+                        <%= user.joined %>
+                    </td>
+                    <td style="padding-right: 1.5rem; padding-left: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">
+                        <a href="/absence/<%= user.id %>">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="width: 1.5rem; height: 1.5rem; color: #63b3ed;" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                                <path d="M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12.435 12.435 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A19.626 19.626 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a19.587 19.587 0 0 0 1.349-.476l.019-.007.004-.002h.001"/>
+                              </svg>
+                        </a>
+                    </td>
+                    <td style="padding-right: 1.5rem; padding-left: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">
+                        <a href="/edit/<%= user.id %>">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="width: 1.5rem; height: 1.5rem; color: #63b3ed;" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                            </svg>
+                        </a>
+                    </td>
+                    <td style="padding-right: 1.5rem; padding-left: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">
+                        <!-- <a href="/delete/<%= user.id %>" onclick="return confirm('¿Esta seguro de eliminar registro?')"> -->
+                            <a style="cursor: pointer;" onclick="confirmar(<%= user.id %>)">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" style="width: 1.5rem; height: 1.5rem; color: #fc8181;" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                            </svg>
+                        </a>
+                    </td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+    <a href="/compute" style="text-decoration: none;">
+        <button class="compute">Atrás</button>
+        </a>
+  </div>
+    <footer>
+        <div class="logoFooter">
+            <img class="imagenLogo" src="/logo-footer-alt.png">
+            <p>Easy computing bussiness!</p>
+        </div>
+        <div class="contacto">
+            <h2>Support</h2>
+            <img class="iconEmail" src="/envelope.png">support@example.com
+            <img class="iconPhone" src="/telephone.png">910-784-8015
+        </div>
+  
+        <div class="redeSociales">
+            <h2>Follow</h2>
+            <img class="facebook" src="/facebook (1).png">
+            <img class="twitter" src="/twitter.png">
+            <img class="instagram" src="/instagram (1).png">
+            <img class="googleplus" src="/google.png">
+  
+  
+        </div>
+  
+    </footer>
+    <p class="derechosautor"> @ All rights reserved. Made by Cristian Bozal</p>
+    </div>
+</body>
+            <script src ="https://code.jquery.com/jquery-3.5.1.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.17/dist/sweetalert2.all.min.js"></script>
+            <script src ="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+            <script src ="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+            <script src ="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
+            <script src ="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+            <script src ="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+            <script src ="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+            <script src ="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
+            <script src ="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
+            <script>
+                $(document).ready(function() {
+                $('#users').DataTable( {
+                    dom: 'Brti',
+                    buttons: [
+                        'pdf', 'print'
+                    ]
+                    });
+                });
+            </script>
+            <script>
+                function confirmar(id){
+                    Swal.fire({
+                    title: '¿Estás seguro que quieres eliminar el registro ' +id+'?', 
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Confirmar'
+                    }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location = '/delete/'+id;
+                            }
+                        })
+                    }
+            </script>
+   
+    </html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="/style.css" rel="stylesheet" type="text/css">
+     <title>Editar Cómputo <%= user.id %> - RRHH</title>
+  </head>
+  <body>
+    <header>
+        <div class="header">
+            <img class="logo" src="/logo-icon_admin.png" />
+            <div class="planbtechTexto">Plan B TECH</div>
+            <div class="menus">
+              <a href="/adminmode" style="text-decoration: none;">
+                  <div class="home">Home</div>
+              </a>
+              <a href="/fullview" style="text-decoration: none;">
+                  <div class="menu1">Administrador</div>
+              </a>
+                  <div class="menu2">Recursos Humanos</div>
+              <a href="/about" style="text-decoration: none;">
+                  <div class="menu3">About</div>
+              </a>
+          </div>
+            <div class="signinAdmin">
+                <img class="usericon" src="/user_admin.png">
+                <p>RRHH Mode</p>
+                <form action="/">
+                <button class="signAdmin">Logout</button>
+              </div>
+            </form>  
+        </div>
+    </header>
+      <% if (user) { %>
+    <form action="/update" method="POST">
+  <input id = "id" name = "id" value="<%= user.id %>" hidden>
+      <div class="computo">
+        <h1>Editar Registro <%= user.id %>, <%= user.user%></h1>
+        
+        <label for="user" class="form-label">Empresa</label>
+          <select class="campos" id="work" name="work" value="<%= user.work%>" class="form-control" tabindex="1">
+            <option value="Plan B TECH">Plan B TECH</option>
+          </select>
+          
+          <label for="user">Empleado</label>
+          <input class="form-control campos" type="text" id="user" name="user" value="<%= user.user%>" tabindex="2">
+  
+          <label for="user" class="form-label">Puesto</label>
+          <select class="campos" id="position" name="position" class="form-control" tabindex="3">
+          <option value="<%= user.position%>"><%= user.position%></option>
+          <option <%= user.position=='Finance'%> value="Finance">Finance</option>
+          <option <%= user.position=='Marketing'%> value="Marketing">Marketing</option>
+          <option <%= user.position=='Comercial'%> value="Comercial">Comercial</option>
+          <option <%= user.position=='Compra'%> value="Compra">Compra</option>
+          <option <%= user.position=='Logística'%> value="Logística">Logística</option>
+          <option <%= user.position=='Control'%> value="Control">Control</option>
+          <option <%= user.position=='Comunicaciones'%> value="Comunicaciones">Comunicaciones</option>
+          <option <%= user.position=='Atención al Cliente'%> value="Atención al Cliente">Atención al Cliente</option>
+          <option <%= user.position=='System'%> value="System">System</option>
+          <option <%= user.position=='Developer'%> value="Developer">Developer</option>
+          </select>
+  
+          <label for="user" class="form-label">Horas</label>
+          <select class="campos" id="hours" name="hours" class="form-control" tabindex="4">
+            <option value="">Horas</option>
+            <option <%= user.hours=='0'%> value="0">0</option>
+            <option <%= user.hours=='1'%> value="1">1</option>
+            <option <%= user.hours=='2'%> value="2">2</option>
+            <option <%= user.hours=='3'%> value="3">3</option>
+            <option <%= user.hours=='4'%> value="4">4</option>
+            <option <%= user.hours=='5'%> value="5">5</option>
+            <option <%= user.hours=='6'%> value="6">6</option>
+            <option <%= user.hours=='7'%> value="7">7</option>
+            <option <%= user.hours=='8' ? "selected" : '' %> value="8">8</option>
+            <option <%= user.hours=='9'%> value="9">9</option>
+            <option <%= user.hours=='10'%> value="10">10</option>
+            <option <%= user.hours=='11'%> value="11">12</option>
+            <option <%= user.hours=='12'%> value="12">12</option>
+        </select>
+        
+        <label for="user" class="form-label">Fecha:</label>
+        <input type = "date" class="form-control campos" id="joined" name="joined" value="<%= user.joined%>" tabindex="5">
+        <br>
+  
+        <div class="signin">
+        <button type="submit"class="compute">Actualizar</button>
+        <a href="/fullviewrrhh" class="cancel"><p>Cancelar</p></a>
+        </div>
+      </div>
+  </form>
+  <% } %>
+  <footer>
+    <div class="logoFooter">
+        <img class="imagenLogo" src="/logo-footer-alt.png">
+        <p>Easy computing bussiness!</p>
+    </div>
+    <div class="contacto">
+        <h2>Support</h2>
+        <img class="iconEmail" src="/envelope.png">support@example.com
+        <img class="iconPhone" src="/telephone.png">910-784-8015
+    </div>
+
+    <div class="redeSociales">
+        <h2>Follow</h2>
+        <img class="facebook" src="/facebook (1).png">
+        <img class="twitter" src="/twitter.png">
+        <img class="instagram" src="/instagram (1).png">
+        <img class="googleplus" src="/google.png">
+
+
+    </div>
+
+</footer>
+<p class="derechosautor"> @ All rights reserved. Made by Cristian Bozal</p>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
+    <link href="/style.css" rel="stylesheet" type="text/css">
+  <title>Full View - Admin</title>
+</head>
+<body>
+  <header>
+      <div class="header">
+          <img class="logo" src="/logo-icon_admin.png" />
+          <div class="planbtechTexto">Plan B TECH</div>
+          <div class="menus">
+            <a href="/adminmode" style="text-decoration: none;">
+            <div class="home">Home</div>
+            </a>
+            <div class="menu1">Administrador</div>
+          <a href="/fullviewrrhh" style="text-decoration: none;">
+            <div class="menu2">Recursos Humanos</div>
+          </a>
+          <a href="/about" style="text-decoration: none;">
+            <div class="menu3">About</div>
+          </a>
+        </div>
+          <div class="signinAdmin">
+              <img class="usericon" src="/user_admin.png">
+              <p>Admin Mode</p>
+              <form action="/">
+              <button class="signAdmin">Logout</button>
+            </div>
+          </form>  
+      </div>
+  </header>
+  <div class="tableroRRHH">
+    <div class="tabla">
+        <h1>Administrador: Todas las imputaciones</h1>
+        <table id="users">
+            <thead>
+                <tr>
+                    <th>
+                        ID
+                    </th>
+                    <th>
+                        Empresa
+                    </th>
+                    <th>
+                        Empleado
+                    </th>
+                    <th>
+                        Puesto de trabajo
+                    </th>
+                    <th>
+                        Horas
+                    </th>
+                    <th>
+                        Fecha
+                    </th>
+                    <th>
+                        View
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <% results.forEach((user)=> { %>
+                <tr>
+                    <td>
+                        <%= user.id %>
+                    </td>
+                    <td>
+                        <%= user.work %>
+                    </td>
+                    <td>
+                        <%= user.user %>
+                    </td>
+                    <td>
+                        <%= user.position %>
+                    </td>
+                    <td>
+                        <%= user.hours %>
+                    </td>
+                    <td>
+                        <%= user.joined %>
+                    </td>
+                    <td>
+                        <a href="/indexviewadmin/<%= user.id %>">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                              </svg>
+                        </a>
+                    </td>
+                </tr>
+            <% }) %>
+            </tbody>
+        </table>
+    </div>
+    <a href="/absenceview" style="text-decoration: none;">
+    <button class="absenceButton">Ausencias</button>
+    </a>
+    </div>
+    <footer>
+        <div class="logoFooter">
+            <img class="imagenLogo" src="/logo-footer-alt.png">
+            <p>Easy computing bussiness!</p>
+        </div>
+        <div class="contacto">
+            <h2>Support</h2>
+            <img class="iconEmail" src="/envelope.png">support@example.com
+            <img class="iconPhone" src="/telephone.png">910-784-8015
+        </div>
+  
+        <div class="redeSociales">
+            <h2>Follow</h2>
+            <img class="facebook" src="/facebook (1).png">
+            <img class="twitter" src="/twitter.png">
+            <img class="instagram" src="/instagram (1).png">
+            <img class="googleplus" src="/google.png">
+        </div>
+    </footer>
+    <p class="derechosautor"> @ All rights reserved. Made by Cristian Bozal</p>
+</body>
+<script src ="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.17/dist/sweetalert2.all.min.js"></script>
+<script src ="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+<script src ="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+<script src ="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+<script src ="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
+<script src ="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
+<script>
+    $(document).ready(function() {
+    $('#users').DataTable( {
+        dom: 'lBfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+        });
+    });
+</script>
+   
+    </html>
