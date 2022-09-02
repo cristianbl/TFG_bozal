@@ -1,0 +1,816 @@
+.header {
+    min-height: 76px;
+    background-color: white;
+    display: flex;
+    align-items: center;    
+    z-index: -999;
+    top: 0;
+    left: 0;
+    right: 0;      
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    margin: 0px;
+    font-family: Inter;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.bodyIndex{
+    background-color: #766df4;
+}
+
+.bodyAbout{
+    background-color: #fff;
+}
+
+.logo {
+    margin-left: 3%;
+}
+
+.planbtechTexto {
+    font-size: 30px;
+    font-family: Inter;
+}
+
+.menus {
+    display: inline-block;
+    margin-left: 3%;
+    font-size: 19px;
+}
+
+.home {
+    display: inline-block;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #766df4;
+}
+
+.menu1 {
+    display: inline-block;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.menu2 {
+    display: inline-block;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.menu3 {
+    display: inline-block;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.menu4 {
+    display: inline-block;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.signin {
+    display: flex;
+    margin-left: 3%;
+    align-items: center;
+    margin-top: revert;
+}
+
+.signinAdmin{
+    display: flex;
+    margin-left: 10%;
+    align-items: center;
+}
+
+.signinAdmin p{
+    position: relative;
+    white-space: nowrap;
+    margin-top: revert;
+}
+
+.usericon {
+    width: 38px;
+    height: 40px;
+    position: relative;
+}
+
+.signin p {
+    position: relative;
+    white-space: nowrap;
+    margin-top: revert; 
+}
+
+.signUp {
+    border-radius: 11px;
+    background-color: #766df4;
+    border: none;
+    height: 35px;
+    width: 5vw;
+    margin-top: 6%;
+    margin-left: 10%;
+    cursor: pointer;
+}
+
+.signAdmin {
+    border-radius: 11px;
+    background-color: #f46d6d;
+    border: none;
+    height: 35px;
+    width: 5vw;
+    margin-left: 10%;
+    cursor: pointer;
+    color: #edf2f7;
+}
+
+.bodyHome{
+    width: 100%;
+    display: flex;
+}
+
+.columnaTexto{
+    width: 50%;
+}
+
+.columnatextoAbout{
+    width: 50%;
+    margin-top: 10%;
+    margin-left: 1%;
+}
+
+.columnaTexto p{
+    color: #edf2f7;
+    margin: 2em 2em 2em 2em;
+    line-height: 30px;
+}
+.columnaTexto h1{
+    color: #edf2f7;
+    margin: 2em 1em;
+ 
+}
+
+.columnatextoAbout h1{
+    text-align: center;
+    color:#766df4;
+    margin: 2em 2em 1em 2em;
+}
+
+.columnatextoAbout h3{
+    text-align: center;
+    color: #37384e;
+    margin: 2em 2em 1em 2em;
+}
+
+.columnatextoAbout h5{
+    text-align: center;
+    color: #000000;
+}
+
+.buttonHome{
+border-radius: 11px;
+    background-color: #F0F0F0;
+    border: none;
+    height: 35px;
+    width: 8vw;
+    margin-top: 6%;
+    color: #1f1818;
+    cursor: pointer;
+    margin: 2em 2em 2em 2em;
+}
+
+.columnaImagen{
+    width: 50%;
+    text-align: center;
+}
+
+.columnaimagenAbout{
+    width: 50%;
+    text-align: center;
+}
+
+
+
+.compute {
+    border-radius: 11px;
+    background-color: #6df474;
+    border: none;
+    height: 35px;
+    width: 10vw;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    cursor: pointer;
+}
+
+.absenceButton {
+    border-radius: 11px;
+    background-color: #766df4;
+    border: none;
+    height: 35px;
+    width: 9vw;
+    margin-top: 6%;
+    margin-bottom: 6%;
+    margin-left: 10%;
+    cursor: pointer;
+}
+
+.computeButtonrrhh {
+    border-radius: 11px;
+    background-color: #6df474;
+    border: none;
+    height: 35px;
+    width: 16vw;
+    margin-top: 6%;
+    margin-left: 10%;
+    margin-bottom: 6%;
+    cursor: pointer;
+}
+
+.cancel {
+    border-radius: 11px;
+    background-color: #f46d6d;
+    border: none;
+    height: 35px;
+    width: 8vw; 
+    margin-left: 10%;
+    cursor: pointer;
+    text-decoration:none;
+    text-align: center;
+    display: block;
+}
+
+.cancel p{
+    margin-top: 7%;
+}
+
+.tablero{
+    box-shadow: inset 0px 0px 2px 0px;
+    width: auto;
+    min-height: 500px;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 5%;
+}
+
+.tableroRRHH{
+    box-shadow: inset 0px 0px 2px 0px;
+    width: auto;
+    min-height: 500px;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 5%;
+}
+
+.tableroview{
+    box-shadow: inset 0px 0px 2px 0px;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 5%;
+}
+
+.tablero h1{
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+
+}
+
+.tableroRRHH h1 {
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+}
+
+.tableroview h1{
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.tabla{
+    border-style: solid; 
+    border-color: #edf2f7; 
+    margin-top: 40px;
+}
+
+table{
+    border-top-width: 1px; 
+    border-color: rgb(209 213 219);
+}
+
+thead{
+    background-color: #5d48bb;
+}
+
+th{
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 12px;
+    color: #f2f2f2;
+}
+
+tbody{
+    background-color:white; 
+    border-top-width: 1px; 
+    border-color: rgb(209 213 219);
+}
+
+tr{
+    white-space: nowrap;
+}
+
+td{
+    border-bottom: #15c994;
+    padding-right: 1.5rem; 
+    padding-left: 1.5rem; 
+    padding-top: 1rem; 
+    padding-bottom: 1rem; 
+    font-size: .875rem; 
+    color: #1f1818;
+}
+
+.form{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.loginForm{
+    width: 20%;
+    text-align: center;
+    box-shadow: inset 0px 0px 2px 0px;  
+    border-radius: 10px;
+    margin: auto;
+    padding: 20px;
+}
+
+
+
+.adminPlans {
+    width: 80%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    margin-bottom: 5%;
+
+}
+
+.adminPlans p{
+    margin: 2em 2em 2em 1em;
+}
+
+.adminMode{
+    width: 40%;
+    text-align: center;
+    box-shadow: inset 0px 0px 2px 0px;
+    height: 550px;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 5%;
+    
+}
+
+.rrhhMode{
+    width: 40%;
+    text-align: center;
+    box-shadow: inset 0px 0px 2px 0px;
+    height: 550px;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 5%;
+}
+
+.buttonAdmin{
+    border-radius: 11px;
+    background-color: #766df4;
+    border: none;
+    height: 35px;
+    width: 8vw;
+    color: #edf2f7;
+    cursor: pointer;
+}
+
+.campos{
+    width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.computo{
+    border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  box-shadow: inset 0px 0px 2px 0px;
+    width: 30%;
+    height: 570px;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.computoAbsence{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    box-shadow: inset 0px 0px 2px 0px;
+    width: 30%;
+    height: 730px;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.computo h1 {
+    text-align: center;
+}
+
+.computoAbsence h1 {
+    text-align: center;
+}
+
+.bannerEmail {
+    background-color: #766df4;
+    height: 271px;
+}
+
+.cajaEmail {
+    float: left;
+    margin-left: 10%;
+    margin-top: 2%;
+    color: #fff;
+}
+
+.typeEmail {
+    border-radius: 10px;
+    background-color: #fff;
+    border: none;
+    height: 35px;
+    width: 73%;
+    text-align: left;
+    color: grey;
+}
+
+.startFreetrial {
+    border-radius: 10px;
+    background-color: #15c994;
+    border: none;
+    height: 35px;
+    margin-left: 2%;
+    width: 8%;
+    color: #fff;
+    position: absolute;
+    ;
+}
+
+.imagenEmpower {
+    display: flex;
+    float: right;
+    margin-right: 10%;
+    margin-top: 4%;
+}
+
+footer {
+    background: #37384e;
+    display: flex;
+    margin-top: auto;
+    bottom: 0;
+}
+
+.logoFooter {
+    width: 30%;
+    display: grid;
+    color: #fff;
+    margin-left: 10%;
+    margin-top: 4%;
+}
+
+.imagenLogo {
+    max-width: 26%;
+}
+
+.contacto {
+    width: 30%;
+    color: #fff;
+    margin-top: 3%;
+}
+
+.iconEmail {
+    max-width: 2%;
+    filter: invert(100%) sepia(2%) saturate(856%) hue-rotate(254deg) brightness(114%) contrast(100%);
+}
+
+.iconPhone {
+    max-width: 2%;
+    padding-left: 6%;
+    filter: invert(100%) sepia(2%) saturate(856%) hue-rotate(254deg) brightness(114%) contrast(100%);
+}
+
+.redeSociales {
+    width: 30%;
+    margin-top: 3%;
+    color: white;
+}
+
+.facebook {
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-image: initial;
+    border-radius: 19%;
+    padding: 1%;
+    max-width: 4%;
+    filter: invert(100%) sepia(2%) saturate(856%) hue-rotate(254deg) brightness(114%) contrast(100%);
+}
+
+.twitter {
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-image: initial;
+    border-radius: 19%;
+    padding: 1%;
+    max-width: 4%;
+    filter: invert(100%) sepia(2%) saturate(856%) hue-rotate(254deg) brightness(114%) contrast(100%);
+}
+
+.instagram {
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-image: initial;
+    border-radius: 19%;
+    padding: 1%;
+    max-width: 4%;
+    filter: invert(100%) sepia(2%) saturate(856%) hue-rotate(254deg) brightness(114%) contrast(100%);
+}
+
+.googleplus {
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-image: initial;
+    border-radius: 19%;
+    padding: 1%;
+    max-width: 4%;
+    filter: invert(100%) sepia(2%) saturate(856%) hue-rotate(254deg) brightness(114%) contrast(100%);
+}
+
+.derechosautor {
+    text-align: center;
+    font-size: 11px;
+    background-color: #37384e;
+    color: white;
+    padding: 28px;
+    margin: 0px;
+}
+
+
+.dt-buttons{
+    display: inline;
+}
+
+
+.dataTables_length{
+    display: inline;
+}
+
+div.dataTables_wrapper div.dataTables_filter {
+    text-align: left;
+}
+
+
+@media (max-width: 800px) {
+    .portada {
+        display: inline;
+    }
+    .foto-portada {
+        width: 100%;
+    }
+    .cajas {
+        width: 100%;
+    }
+    .imagenEmpower {
+        width: 30%;
+    }
+    .ventajas p {
+        font-size: 10px;
+    }
+    .tick {
+        width: 8%;
+        height: 2%;
+        margin-top: 13%;
+        margin-right: 5%;
+    }
+    .free {
+        font-size: 14px;
+    }
+    .standard {
+        font-size: 14px;
+    }
+    .precio h3 {
+        font-size: 14px;
+        color: grey;
+    }
+    .free h1 {
+        font-size: 40px;
+        color: #766df4;
+        margin: inherit
+    }
+    .standard h1 {
+        font-size: 40px;
+        color: #766df4;
+        margin: inherit
+    }
+    .header {
+        flex-direction: column;
+    }
+
+    .bannerEmail{
+        width: 100%;
+    }
+
+    .logo{
+        margin: 0;
+    }
+    .menus{
+        display: flex;
+        margin-left: 0;
+        font-size: 10px;
+        margin-top: 5%;
+    }
+
+    .signin{
+        display: flex;
+        margin-left: 0;
+        align-items: center;
+    }
+
+    .signinAdmin{
+        display: flex;
+        margin-left: 0;
+        align-items: center;
+    }
+
+    .signUp{
+        width: 19vw;
+    }
+
+    .bodyHome{
+        width: 100%;
+        display: block;
+    }
+
+    .columnatextoAbout{
+        width: 100%;
+    }
+
+    .columnaimagenAbout{
+        width: 100%;
+    }
+
+    .startFreetrial{
+        width: 16%;
+    }
+
+    .imagenEmpower{
+        float: left;
+        margin-left: 10%;
+    }
+
+    .logoAbout{
+        width: 100%;
+    }
+
+    .logoFooter{
+        width: 23%;
+        display: table;
+    }
+
+    .contacto{
+        width: 50%;
+    }
+
+    .redeSociales{
+        width: 20%;
+    }
+
+    .columnaTexto{
+        width: 100%;
+    }
+
+    .columnaImagen{
+        width: 100%;
+    }
+
+    .logoIndex {
+        width: 90%;
+    }
+
+    .buttonHome{
+        width: 34vw;
+    }
+
+    .computo{
+        width: 70%;
+        height: auto;
+    }
+
+    .compute{
+        width: 35vw;
+    }
+
+    .computeButtonrrhh{
+        width: 39vw;
+    }
+
+    .absenceButton{
+        width: 28vw;
+    }
+
+    .cancel{
+        width: 20vw;
+        margin-top: 0;
+    }
+
+    .cancel p{
+        margin-top: 10%;
+    }
+
+    .computoAbsence{
+        width: 70%;
+    }
+
+    .loginForm{
+        width: 60%;
+        margin-bottom: 10%;
+    }
+
+    .buttonAdmin{
+        width: 20vw;
+    }
+    .signAdmin{
+        width: 15vw;
+    }
+
+    .adminPlans{
+        width: 100%;
+        display: block;
+    }
+
+    .adminMode{
+        width: 80%;
+        height: 600px;
+        margin-bottom: 10%;
+    }
+
+    .rrhhMode{
+        width: 80%;
+        height: 600px;
+        margin-bottom: 10%;
+    }
+
+    table {
+        width:100%;
+    }
+    thead {
+        display: none;
+    }
+    tr:nth-of-type(2n) {
+        background-color: inherit;
+    }
+    tr td:first-child {
+        background: #f0f0f0;
+        font-weight:bold;
+        font-size:1.3em;
+    }
+    tbody td {
+        display: block;
+        text-align:center;
+    }
+    tbody td:before {
+        content: attr(data-th);
+        display: block;
+        text-align:center;
+    }
+
+        div.dataTables_wrapper div.dataTables_filter input {
+            margin-left: 0.5em;
+            display: inline-block;
+            width: 60%;
+        }       
+}
+
+
+    
